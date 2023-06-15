@@ -1,4 +1,4 @@
-package web.hibernate.entity;
+package web.entity;
 
 
 import javax.persistence.*;

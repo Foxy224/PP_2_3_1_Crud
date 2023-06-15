@@ -1,8 +1,8 @@
-package web.hibernate.service;
+package web.service;
 
 
-import web.hibernate.dao.UserDao;
-import web.hibernate.entity.User;
+import web.dao.UserDao;
+import web.entity.User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -31,13 +31,17 @@ public class UserServiceImp implements UserService {
 
     @Override
     public User getById(long id) {
-        return userDao.getById(id);
+        User user = null;
+        for (User u: userDao.getById(id)) {
+            user = u;
+        }
+        return user;
     }
 
     @Transactional
     @Override
-    public void update(long id, User user) {
-        userDao.update(id, user);
+    public void update(User user) {
+        userDao.update(user);
     }
 
     @Transactional

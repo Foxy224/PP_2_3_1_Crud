@@ -1,4 +1,4 @@
-package web.hibernate.config;
+package web.config;
 
 
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
@@ -23,7 +23,7 @@ import java.util.Properties;
 @Configuration
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
-@ComponentScan(value = "web.hibernate")
+@ComponentScan(value = "web")
 public class AppConfig {
 
     private final Environment env;

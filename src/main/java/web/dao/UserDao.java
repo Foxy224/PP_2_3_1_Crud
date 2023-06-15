@@ -1,6 +1,6 @@
-package web.hibernate.dao;
+package web.dao;
 
-import web.hibernate.entity.User;
+import web.entity.User;
 
 
 import java.util.List;
@@ -9,9 +9,9 @@ public interface UserDao {
     void add(User user);
     List<User> listUsers();
 
-    User getById(long id);
+    List<User> getById(long id);
 
-    void update(long id, User user);
+    void update(User user);
 
     void delete(long id);
 }

@@ -1,6 +1,6 @@
-package web.hibernate.service;
+package web.service;
 
-import web.hibernate.entity.User;
+import web.entity.User;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ public interface UserService {
 
     User getById(long id);
 
-    void update(long id, User user);
+    void update(User user);
 
     void delete(long id);
 
